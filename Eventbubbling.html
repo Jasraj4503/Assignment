@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        body, div, ul, li, span{
+            border: 2px solid black;
+            display: block;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>body (great-great-grandparent)
+    <div>div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("span").parents().css({"border": "2px solid red"})
+    })
+</script>
+</html>
