@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            height: 500px;
+            width: 600px;
+            border: 3px solid black;
+        }
+
+        h2 {
+            margin-left: 30px;
+        }
+
+        h6 {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        td {
+            padding-left: 30px;
+            font-size: 25px;
+        }
+
+        input {
+            width: 200px;
+            margin-left: 130px;
+        }
+
+        button {
+            height: 30px;
+            width: 90px;
+            margin-left: 370px;
+            margin-top: 10px;
+        }
+        p{
+            margin-left: 100px;
+            font-size: 20px;
+        }
+        .para{
+            margin-left: 370px;
+            margin-top: -43px;
+        }
+         #total {
+            color: blue;
+            font-size: 20px;
+        }
+
+        #percentage {
+            color: blue;
+            font-size: 20px;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Marksheet for Information Technology</h2>
+        <h6>Enter Marks</h6>
+        <table>
+            <tr>
+                <td>1. C Language</td>
+                <td><input type="number" id="language1"></td>
+            </tr>
+            <tr>
+                <td>2. C++ Language</td>
+                <td><input type="number" id="language2"></td>
+            </tr>
+            <tr>
+                <td>3. Database</td>
+                <td><input type="number" id="language3"></td>
+            </tr>
+            <tr>
+                <td>4. HTML</td>
+                <td><input type="number" id="language4"></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="number" id="language5"></td>
+            </tr>
+            <tr>
+                <td>6. php</td>
+                <td><input type="number" id="language6"></td>
+            </tr>
+            <tr>
+                <td>7. Core java</td>
+                <td><input type="number" id="language7"></td>
+            </tr>
+        </table>
+        <button onclick="Result()">Result</button>
+        <p>Total is : <span id="total">0</span> / 350</p>
+        <p class="para">Percentage is : <span id="percentage">0</span> %</p>
+    </div>
+    <script>
+        function Result() {
+            // 1. C Language
+            var first_number = document.getElementById("language1").value
+            
+            // 2. C++ Language
+            var second_number = document.getElementById("language2").value
+
+            // 3. Database
+            var third_number = document.getElementById("language3").value
+
+            // 4. HTML
+            var fourth_number = document.getElementById("language4").value
+
+            // 5. CSS
+            var fifth_number = document.getElementById("language5").value
+
+            // 6. php
+            var sixth_number = document.getElementById("language6").value
+
+            // 7. Core java
+            var seventh_number = document.getElementById("language7").value
+
+            // console.log("frst_value", typeof first_number)
+            // total
+            var total_number = +first_number + +second_number + +third_number + +fourth_number + +fifth_number + +sixth_number + +seventh_number
+            document.getElementById("total").innerHTML=total_number
+            
+            //percentage
+            var percentage_number = (total_number/350)*100
+            document.getElementById("percentage").innerHTML=percentage_number.toFixed(2)
+            
+        }
+
+    </script>
+</body>
+
+</html>
